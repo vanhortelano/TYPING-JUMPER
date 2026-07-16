@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Dino Homepage</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="homepage-shell">
+    <div class="homepage-card">
+      <h1>Typing Jumper</h1>
+      <h4>By: Terrins Hortelano</h4>
+      <p>Choose your difficulty, then start the game and type the words before the cactus reaches you.</p>
+
+      <div class="homepage-score-box">
+        <span>Best Score</span>
+        <strong id="homepageBestScore">0</strong>
+      </div>
+
+      <form class="homepage-form" action="../index.html" method="get">
+        <label for="difficulty">Choose difficulty</label>
+        <select id="difficulty" name="difficulty">
+          <option value="easy">Easy</option>
+          <option value="normal" selected>Normal</option>
+          <option value="hard">Hard</option>
+          <option value="impossible">Impossible</option>
+        </select>
+        <button type="submit">Start Game</button>
+      </form>
+    </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const bestScore = parseInt(localStorage.getItem('typingDinoBestScore') || '0', 10) || 0;
+      const bestScoreEl = document.getElementById('homepageBestScore');
+      if (bestScoreEl) {
+        bestScoreEl.textContent = bestScore;
+      }
+    });
+  </script>
+</body>
+</html>
