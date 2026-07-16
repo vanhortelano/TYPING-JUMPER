@@ -17,6 +17,7 @@ const obstacleLayer = document.getElementById('obstacleLayer');
 const dino = document.getElementById('dino');
 const ground = document.getElementById('ground');
 const keyboard = document.getElementById('keyboard');
+const mobileInput = document.getElementById('mobileInput');
 
 const words = [
   'apple','yellow','flower','castle','mushroom','pepper','jungle','rocket','banana','pirate','kingdom','champion','future','monster','puzzle','sunrise','driver','friend','galaxy','history','island','journey','lemonade','marble','nature','orchestra','people','quality','rhythm','science','treasure','umbrella','victory','whisper','xylophone','youth','zodiac'
@@ -538,6 +539,24 @@ if (difficultyEl) {
 }
 
 document.addEventListener('keydown', handleKeyPress);
+// Open the Android keyboard when the typing area is tapped
+wordText.addEventListener('click', () => {
+    mobileInput.focus();
+});
+
+// Send the typed character to your existing game logic
+mobileInput.addEventListener('input', (e) => {
+    const value = e.target.value;
+
+    if (value.length > 0) {
+        handleKeyPress({
+            key: value[value.length - 1]
+        });
+    }
+
+    // Clear the input for the next character
+    e.target.value = "";
+});
 
 createKeyboard();
 createLifeDisplay();
