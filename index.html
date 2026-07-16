@@ -32,11 +32,20 @@
     </main>
 
     <section class="typing-panel">
-      <div class="word-display">
-        <span id="wordText" class="word-text"></span>
-      </div>
-      <div class="keyboard" id="keyboard"></div>
-    </section>
+  <div class="word-display">
+    <span id="wordText" class="word-text"></span>
+
+    <input
+      type="text"
+      id="mobileInput"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false">
+  </div>
+
+  <div class="keyboard" id="keyboard"></div>
+</section>
 
     <div class="overlay hidden" id="overlay">
       <div class="overlay-card">
