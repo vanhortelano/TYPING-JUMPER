@@ -3,54 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Typing Dino Homepage</title>
+  <title>Typing Jumper Homepage</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="homepage-shell">
-    <div class="homepage-card">
-      <h1>Typing Jumper</h1>
-      <h4>By: Terrins Hortelano</h4>
-      <p>Choose your difficulty, then start the game and type the words before the cactus reaches you.</p>
 
-      <div class="homepage-score-box">
-        <span>Best Score</span>
-        <strong id="homepageBestScore">0</strong>
-      </div>
+<div class="homepage-shell">
+  <div class="homepage-card">
+    <h1>Typing Jumper</h1>
+    <h4>By: Terrins Hortelano</h4>
 
-      <form class="homepage-form" action="index.html" method="get">
-        <label for="difficulty">Choose difficulty</label>
-        <select id="difficulty" name="difficulty">
-          <option value="easy">Easy</option>
-          <option value="normal" selected>Normal</option>
-          <option value="hard">Hard</option>
-          <option value="impossible">Impossible</option>
-        </select>
-       <button type="submit" id="wow">Start Game</button>
-      </form>
+    <p>
+      Choose your difficulty, then start the game and type the words before the cactus reaches you.
+    </p>
+
+    <div class="homepage-score-box">
+      <span>Best Score</span>
+      <strong id="homepageBestScore">0</strong>
     </div>
-    </div>
+
+    <label for="difficulty">Choose difficulty</label>
+
+    <select id="difficulty">
+      <option value="easy">Easy</option>
+      <option value="normal" selected>Normal</option>
+      <option value="hard">Hard</option>
+      <option value="impossible">Impossible</option>
+    </select>
+
+    <br><br>
+
+    <button type="button" id="wow">Start Game</button>
+
   </div>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const bestScore = parseInt(localStorage.getItem('typingDinoBestScore') || '0', 10) || 0;
-      const bestScoreEl = document.getElementById('homepageBestScore');
-      if (bestScoreEl) {
-        bestScoreEl.textContent = bestScore;
-     document.getElementById("wow").addEventListener("click", function () {
+</div>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const bestScore =
+    parseInt(localStorage.getItem("typingDinoBestScore") || "0", 10);
+
+  document.getElementById("homepageBestScore").textContent = bestScore;
+
+  document.getElementById("wow").addEventListener("click", function () {
     // Open Smartlink
     window.open(
       "https://www.effectivecpmnetwork.com/cuc2xg2n9?key=5faac2607b479a3215129b6b420ea753",
       "_blank"
     );
 
-    // Start the game
+    // Always show the game page (ads open in a new tab)
     window.location.href = "index.html";
   });
 
 });
 </script>
+
+<!-- Adsterra Social Bar -->
+<script src="https://pl30399553.effectivecpmnetwork.com/87/c0/e7/87c0e762964e41fe4c5f724d9ff95d04.js"></script>
 
 </body>
 </html>
