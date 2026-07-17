@@ -18,8 +18,10 @@
     </header>
 
     <section class="controls game-controls">
-      <a class="button-link home-button" href="hompage.html">Home</a>
+      <a class="button-link home-button" href="hompage.html" id="homeButton">Home</a>
     </section>
+
+
 
     <main class="game-area" id="gameArea">
       <div class="sky"></div>
@@ -51,11 +53,42 @@
       <div class="overlay-card">
         <h1 id="overlayTitle">Typing Dino</h1>
         <p id="overlayMessage">Type the full phrase, then press Space to jump over the next cactus.</p>
-        <button id="restartButton">Play Again</button>
+        <button id="restartButton" class="po" onclick="pol()">Play Again</button>
       </div>
     </div>
   </div>
 
   <script src="script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const restartBtn = document.getElementById("restartButton");
+      if (!restartBtn) return;
+
+      restartBtn.addEventListener("click", () => {
+        // Open Smartlink ONLY when the user clicks Play Again
+        window.open(
+          "https://www.effectivecpmnetwork.com/cuc2xg2n9?key=5faac2607b479a3215129b6b420ea753",
+          "_blank"
+        );
+      });
+    });
+
+    // Smartlink for Home button (only when user clicks Home)
+    const homeBtn = document.getElementById("homeButton");
+    if (homeBtn) {
+      homeBtn.addEventListener("click", (e) => {
+        // Let the click continue to open hompage.html
+        window.open(
+          "https://www.effectivecpmnetwork.com/cuc2xg2n9?key=5faac2607b479a3215129b6b420ea753",
+          "_blank"
+        );
+      });
+    }
+
+    // Keep compatibility with inline onclick="pol()" if it exists in your script.js
+    function pol() {}
+
+  </script>
 </body>
 </html>
