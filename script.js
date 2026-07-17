@@ -227,12 +227,12 @@ function startGame() {
   if (gameState.running) return;
   hideOverlay();
   gameState.running = true;
-  gameState.speed = 1;
+  gameState.speed = 1.3;
   gameState.score = 0;
   gameState.lives = 5;
   gameState.totalKeyPresses = 0;
   gameState.correctKeyPresses = 0;
-  gameState.highestSpeed = 1;
+  gameState.highestSpeed = 1.3;
   gameState.currentWord = '';
   gameState.typedIndex = 0;
   gameState.obstacles = [];
