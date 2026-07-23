@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typing Dino</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-shell">
+    <div class="life-display" id="lifeDisplay" aria-label="Player lives"></div>
+    <header class="hud">
+      <div class="hud-item"><strong>Score</strong><span id="score">0</span></div>
+      <div class="hud-item"><strong>Best</strong><span id="bestScore">0</span></div>
+      <div class="hud-item"><strong>Difficulty</strong><span id="difficultyValue">Normal</span></div>
+      <div class="hud-item"><strong>Speed</strong><span id="speedValue">1.0x</span></div>
+      <div class="hud-item"><strong>Accuracy</strong><span id="accuracy">100%</span></div>
+
+      <style>
+  
+
+.sidebar {
+  width: 50px;
+  position: absolute;
+    top: 0px;
+    left: 0px;
+}
+        </style>
+    </header>
+
+    <section class="controls game-controls">
+      <a class="button-link home-button" href="hompage.html" id="homeButton">Home</a>
+    </section>
+
+
+
+    <main class="game-area" id="gameArea">
+      <div class="sky"></div>
+      <div class="clouds" id="clouds"></div>
+      <div class="hills"></div>
+      <div class="ground" id="ground"></div>
+      <div class="dino" id="dino" aria-label="Dino"></div>
+      <div class="obstacle-layer" id="obstacleLayer"></div>
+      <div id="damageOverlay" class="damage-overlay" aria-hidden="true"></div>
+    </main>
+
+    <section class="typing-panel">
+  <div class="word-display">
+    <span id="wordText" class="word-text"></span>
+
+    <input
+      type="text"
+      id="mobileInput"
+      autocomplete="off"
+      autocorrect="off"
+      autocapitalize="off"
+      spellcheck="false">
+  </div>
+
+  <div class="keyboard" id="keyboard"></div>
+</section>
+
+    <div class="overlay hidden" id="overlay">
+      <div class="overlay-card">
+        <h1 id="overlayTitle">Typing Dino</h1>
+        <p id="overlayMessage">Type the full phrase, then press Space to jump over the next cactus.</p>
+        <button id="restartButton" class="po" onclick="pol()">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <script async="async" data-cfasync="false" src="https://pl30402382.effectivecpmnetwork.com/ffeb1f4bd34fc30d6b7d3fab49103940/invoke.js"></script>
+<div id="container-ffeb1f4bd34fc30d6b7d3fab49103940"></div>
+
+  </aside>
+
+
+  <script src="script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const restartBtn = document.getElementById("restartButton");
+      if (!restartBtn) return;
+
+      restartBtn.addEventListener("click", () => {
+        // Open Smartlink ONLY when the user clicks Play Again
+        window.open(
+          "https://www.effectivecpmnetwork.com/cuc2xg2n9?key=5faac2607b479a3215129b6b420ea753",
+          "_blank"
+        );
+      });
+    });
+
+    // Smartlink for Home button (only when user clicks Home)
+    const homeBtn = document.getElementById("homeButton");
+    if (homeBtn) {
+      homeBtn.addEventListener("click", (e) => {
+        // Let the click continue to open hompage.html
+        window.open(
+          "https://www.effectivecpmnetwork.com/cuc2xg2n9?key=5faac2607b479a3215129b6b420ea753",
+          "_blank"
+        );
+      });
+    }
+
+    // Keep compatibility with inline onclick="pol()" if it exists in your script.js
+    function pol() {}
+
+  </script>
+
+  <script src="https://pl30399553.effectivecpmnetwork.com/87/c0/e7/87c0e762964e41fe4c5f724d9ff95d04.js"></script>
+
+</body>
+</html>
